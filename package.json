@@ -1,0 +1,17 @@
+{
+	"name": "dodai-box",
+	"version": "0.1.0",
+	"scripts": {
+		"gulp": "gulp"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:KADlancer/dodai-box.git"
+	},
+	"license": "ISC",
+	"private": true,
+	"devDependencies": {
+	},
+	"dependencies": {
+	}
+}

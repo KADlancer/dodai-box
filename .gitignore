@@ -9,3 +9,9 @@
 ehthumbs.db
 Thumbs.db
 userSettings.json
+
+# ignored folders    #
+######################
+node_modules/
+node_modules
+.vagrant/
