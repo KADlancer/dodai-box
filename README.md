@@ -16,3 +16,13 @@ the requirements list further down this doc.
 
 Requirements
 ---
+- (optional) Vagrant by HashiCorp - https://www.vagrantup.com/
+- (optional) VirtualBox by Oracle - https://www.virtualbox.org/
+
+If you want to run the project in a virtual box and provision it with vagrant, 
+those two requirements are mandatory
+
+
+
+Requirements
+---
