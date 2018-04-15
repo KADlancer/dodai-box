@@ -1,0 +1,54 @@
+{% for element in content %}
+
+
+	{% if (element["type"] == "heading") %}
+	{# case heading #}
+		<h3>{{ element["content"] }}</h3>
+
+
+	{% elseif (element["type"] == "paragraph") %}
+	{# case paragraph #}
+		<p>{{ element["content"]|raw }}</p>
+
+
+	{% elseif (element["type"] == "list") %}
+	{# case list #}
+		{{ element["ordered"] ? '<ol>' : '<ul>' }}
+
+		{% for item in element["content"] %}
+			<li>
+				{{ item|raw }}
+			</li>
+		{% endfor %}
+
+		{{ element["ordered"] ? '</ol>' : '</ul>' }}
+
+
+	{% elseif (element["type"] == "moreLink") %}
+	{# case moreLink #}
+		<a class="more" href="" title="">{{ element["content"]|raw }}</a>
+
+
+	{% elseif (element["type"] == "linkList") %}
+	{# case linkList #}
+		<ul class="linkList">
+			{% for item in element["content"] %}
+				<li>
+					<a href="">{{ item|raw }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+
+
+	{% elseif (element["type"] == "checkList") %}
+	{# case checkList #}
+		<ul class="checkList">
+			{% for item in element["content"] %}
+				<li>
+					{{ item|raw }}
+				</li>
+			{% endfor %}
+		</ul>
+
+
+{% endfor %}
